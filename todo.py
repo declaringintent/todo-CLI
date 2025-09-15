@@ -20,9 +20,11 @@ def save_task(n): # saves to the same file
 def format_task():
     print('The format is: ')
     print('[add] <description> <status>')
+    print('status optional: todo(default) | in-progress | done')
     print('[done|delete|in-progress] <task_id>')
     print('[list]')
-    print('[search] <description>')
+    print('list status <status>')
+    print('[search] <dkeyword>')
     print('[update] <task_id> <description>')
     sys.exit(1)
     
@@ -85,12 +87,6 @@ def status_update(lst):
     
         
 
-        
-
-
-
-        
-
 def delete_status(lst):
     if len(lst) < 3:
         print("Error: task_id missing")
@@ -143,7 +139,7 @@ def list_task(lst):
 
 def search_task(lst):
     if len(lst) < 3:
-        print("Error: search description missing")
+        print("Error: search keyword missing")
         format_task()
     task = load_task()
     desc = ' '.join(lst[2:])
@@ -214,4 +210,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
