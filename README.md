@@ -15,5 +15,15 @@ Requires Python 3.8+.
 ```bash
 # run directly
 python todo.py add "Buy milk"
+# list all tasks
 python todo.py list
+# list only done tasks
+python todo.py list done
+# change the status of a task
 python todo.py done 1
+# delete a task
+python todo.py delete 1
+# search a keyword
+python todo.py search "milk"
+# update a task
+python todo.py update 1 "add milk and exercise"
