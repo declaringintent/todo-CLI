@@ -139,28 +139,6 @@ def list_task(lst):
         for i in task:
             return_format(i)
 
-        
-    '''if len(lst) > 2:              # convoluted for no reason
-            if lst[-1].lower() == 'done':
-                for i in task:
-                    if i['status'] == 'done':
-                        return_format(i)
-                    else:
-                        continue
-            elif lst[-1].lower() == 'in-progress':
-                for i in task:
-                    if i['status'] == 'in-progress':
-                        return_format(i)
-                    else:
-                        continue
-            elif lst[-1].lower() == 'todo':
-                for i in task:
-                    if i['status'] == 'todo':
-                        return_format(i)
-                    else:
-                        continue'''
-
-
                 
 
 def search_task(lst):
@@ -236,13 +214,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
 
