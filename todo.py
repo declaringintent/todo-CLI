@@ -6,11 +6,11 @@ from datetime import datetime
 filename = 'todo.json'
 def load_task(): #checks if a file with such name exists
     if os.path.exists(filename):
-        try:
-            with open(filename, 'r') as f:
+        with open(filename, 'r') as f:
+            try:
                 return json.load(f)
-        except json.JSONDecodeError:
-            return[]
+            except json.JSONDecodeError:
+                return[]
     return []
 
 def save_task(n): # saves to the same file
